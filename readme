@@ -1,12 +1,12 @@
-###🧾 John Doe Form
+ ## John Doe Form
 
 Este projeto é um formulário simples construído com TypeScript, React, NestJS e PostgreSQL, utilizando Docker / Docker Compose para containerização e execução do ambiente completo.
 
 O objetivo principal foi criar uma aplicação enxuta, funcional e de fácil execução local.
 
-###🏗️ Arquitetura do projeto
+🏗️ Arquitetura do projeto
 
-####🔧 API (NestJS)
+🔧 API (NestJS)
 
 A API foi desenvolvida com NestJS, escolhida pela produtividade e pelo excelente suporte nativo a validações, estrutura modular e tratamento de erros.
 
@@ -14,7 +14,7 @@ Para persistência de dados, foi utilizado o TypeORM, que facilita a integraçã
 
 Inicialmente foi considerada a utilização do Prisma, porém optou-se pelo TypeORM devido à instabilidade observada em instalações recentes com NestJS (especialmente após atualizações da versão 7 do Prisma).
 
-####🗄️ Banco de dados (PostgreSQL + Docker)
+🗄️ Banco de dados (PostgreSQL + Docker)
 
 O banco de dados PostgreSQL é executado via Docker, com inicialização automática de schema através de script SQL.
 
@@ -22,13 +22,13 @@ Foi considerada a utilização de migrations na própria API, porém optou-se po
 
 Essa decisão ajuda a manter o projeto leve e direto ao ponto, já que não há necessidade de cenários mais complexos como multi-tenancy ou versionamento avançado de schema.
 
-#### 🌐 Front-end (React + Vite)
+ 🌐 Front-end (React + Vite)
 
 O front-end foi desenvolvido com React + Vite, priorizando velocidade de desenvolvimento e simplicidade.
 
 A estilização foi feita utilizando CSS puro, evitando o uso de bibliotecas adicionais como Tailwind ou Bootstrap, com o objetivo de manter o projeto leve e sem dependências desnecessárias.
 
-####🚀 Considerações finais
+🚀 Considerações finais
 
 Este projeto foi pensado como uma base simples e funcional para um formulário completo com integração entre front-end, API e banco de dados, mantendo o foco em:
 
@@ -39,7 +39,7 @@ Facilidade de execução via Docker
 Em futuras evoluções, o projeto pode facilmente ser expandido para incluir migrations, autenticação e melhorias de escalabilidade — caso o “John Doe” resolva evoluir a ideia 😉
 
 
-#### Tutorial para o John Doe.
+ Tutorial para o John Doe.
 
 Para iniciar a aplicação localmente, basta estar com o docker/ docker compose instalado.
 
