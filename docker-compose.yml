@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_app
+    restart: always
+    environment:
+      POSTGRES_USER: johnroot
+      POSTGRES_PASSWORD: afbfc5ba1901f994804904de833129e3b9ab4309
+      POSTGRES_DB: jonhdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  api:
+    build: ./api
+    container_name: api
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    depends_on:
+      - postgres
+
+  web:
+    build: ./web
+    container_name: web
+    restart: always
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+    depends_on:
+      - api
+
+volumes:
+  postgres_data:

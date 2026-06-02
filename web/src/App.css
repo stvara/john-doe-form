@@ -1,0 +1,35 @@
+body {
+   background-color: #dbeafe;
+}
+.app-container {
+  min-height: 100vh;
+  width: 100%;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.landing-card {
+  background-color: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 400px;
+}
+
+.landing-card input,
+.landing-card select,
+.landing-card textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.landing-card button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
